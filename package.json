@@ -2,7 +2,7 @@
   "devDependencies": {
     "tailwindcss": "^3.1.8"
   },
-  "name": "tailwindcss_manda",
+  "name": "tailwindcss_portfolio",
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "dependencies": {
@@ -65,7 +65,7 @@
     "supports-preserve-symlinks-flag": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "tailwindcss build src/input.css -o dist/input.css"
   },
   "keywords": [],
   "author": "",
