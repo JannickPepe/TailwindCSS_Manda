@@ -1,0 +1,632 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+    <!--- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch  -->
+</head>
+
+<body class="font-nunito">
+    <!-- into section -->
+    <div class="h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden">
+        <!-- navbar -->
+        <nav class="w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
+            <div class="container mx-auto py-5 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <img class="w-8" src="./img/logo.png" alt="logo" />
+                    <span class="text-2xl font-bold text-indigo-900 dark:text-white">TailwindCSS Portfolio.</span>
+                </div>
+                <ul class="hidden md:flex space-x-3 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase">
+                    <li class=" text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer hover:shadow-inner">
+                        <a href="#">homepage</a>
+                    </li>
+                    <li class=" text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer hover:shadow-inner">
+                        <a href="#about">about me</a>
+                    </li>
+                    <li class=" text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer hover:shadow-inner">
+                        <a href="#services">services</a>
+                    </li>
+                    <li class=" text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer hover:shadow-inner">
+                        <a href="#works">works</a>
+                    </li>
+                    <li class=" text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer hover:shadow-inner">
+                        <a href="#timeline">timeline</a>
+                    </li>
+                    <li class=" text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer hover:shadow-inner">
+                        <a href="#contact">contact</a>
+                    </li>
+                </ul>
+                <img id="moon" src="./img/moon.png" class="hidden md:block w-5 cursor-pointer" alt=""/>
+                <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                </div>
+                <ul id="menu" class="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
+                    <li>
+                        <a id="hLink" href="#">homepage</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#about">about me</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#services">services</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#works">works</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#timeline">timeline</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#contact">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- intro content -->
+        <!-- image -->
+        <img class="absolute bottom-0 right-0 lg:left-0 mx-auto h-96 w-1/3" src="./img/curve_arrow1.png" alt="" />
+        <!-- circle -->
+        <div class="hidden lg:block absolute -bottom-1/4 mx-auto w-big h-big bg-indigo-900 rounded-full -z-10" ></div>
+        <!-- animated text -->
+        <div class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold">
+            <span class="text-gray-600">Student and <span class="block">Freelance</span></span>
+            <p id="text" class="text-red-500"></p>
+        </div>
+        <!-- texts -->
+        <div class="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3" >
+            <h1 class="text-4xl font-bold text-indigo-900">Hi, I'm Jannick Pedersen</h1>
+            <p class="text-gray-400">
+            with over 10 years of experience on web design and development. I am 30 years old with a son with the age of 8. I am an alone fulltime parent living in a 3-room apartment in Taastrup
+            </p>
+            <a class="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit" href="#contact">Hire Me</a>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about" class="px-10 dark:bg-slate-900">
+        <div class="container mx-auto py-32 flex flex-col-reverse lg:flex-row items-center gap-20">
+            <!-- left -->
+            <div class="relative">
+                <img class="h-1/4 absolute top-0 left-0 -z-10" src="./img/dots.png" alt="" />
+                <div class="h-full rounded-full overflow-hidden ">
+                    <img src="./img/avatar.png" alt="" />
+                </div>
+            </div>
+            <!-- right -->
+            <div class="my-auto flex flex-col gap-3">
+                <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
+                <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
+                <h1 class="text-3xl font-medium dark:text-white">Better Experience</h1>
+                <p class="text-gray-400">
+                I design and build digital products. I'm also a multi-disciplinary
+                maker with over 10 years of experiences in wide range of design
+                disciplines.
+                </p>
+                <h2 class="text-gray-400 font-medium">HTML / CSS</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-gray-400 font-medium">Javascript</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-gray-400 font-medium">React</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-gray-400 font-medium">NextJS</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services" class="py-20 dark:bg-slate-900">
+        <div class="container mx-auto">
+            <!-- top -->
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-indigo-600 font-bold">SERVICES</h1>
+                <h1 class="text-3xl dark:text-white">What do I offer?</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                My approach to website design is to create a website that
+                strengthens your company’s brand while ensuring ease of use and
+                simplicity for your audience.
+                </p>
+            </div>
+            <!-- bottom -->
+            <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+            <!-- card -->
+            <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <div class="services" data-city="1">
+                    <img class="w-10" src="./img/icon.png" alt="" />
+                    <h1 class="font-medium text-lg dark:text-white">Frontend / Backend</h1>
+                    <p class="text-gray-400">
+                        Budapest is the capital city of Hungary. It is best known for its arts and culture. It is a relatively small city, however there are much to see and do.
+                        <span class="dots">...</span>
+                        <span class="more" style="display: none;">Situated on thermal springs, there are many naturally heated baths to relax in, the Széchenyi baths are the largest with 15 indoor baths and 3 outdoor. There are many spectacular viewpoints in Budapest, great for capturing the views of the city. From 360 panoramic views up at St Stephens Basilica to a wide view of the parliament and the River at Fisherman’s Bastion. Visit the Museum of Fine Arts and enjoy a day amongst famous European art. Classical music lovers will appreciate a performance at the Academy of Music.</span>
+                        <button onclick="readMore('1')" class="myBtn mt-3 px-5 py-2 bg-orange-500 text-white duration-300 hover:bg-orange-700 sm:flex flex-auto">
+                        Read more</button>
+                    </p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <div class="services" data-city="2">
+                    <img class="w-10" src="./img/icon.png" alt="" />
+                    <h1 class="font-medium text-lg dark:text-white">Fullstack developer</h1>
+                    <p class="text-gray-400">
+                        Budapest is the capital city of Hungary. It is best known for its arts and culture. It is a relatively small city, however there are much to see and do.
+                        <span class="dots">...</span>
+                        <span class="more" style="display: none;">Situated on thermal springs, there are many naturally heated baths to relax in, the Széchenyi baths are the largest with 15 indoor baths and 3 outdoor. There are many spectacular viewpoints in Budapest, great for capturing the views of the city. From 360 panoramic views up at St Stephens Basilica to a wide view of the parliament and the River at Fisherman’s Bastion. Visit the Museum of Fine Arts and enjoy a day amongst famous European art. Classical music lovers will appreciate a performance at the Academy of Music.</span>
+                        <button onclick="readMore('2')" class="myBtn mt-3 px-5 py-2 bg-orange-500 text-white duration-300 hover:bg-orange-700 sm:flex flex-auto">
+                        Read more</button>
+                    </p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <div class="services" data-city="3">
+                    <img class="w-10" src="./img/icon.png" alt="" />
+                    <h1 class="font-medium text-lg dark:text-white">Environment development</h1>
+                    <p class="text-gray-400">
+                        Budapest is the capital city of Hungary. It is best known for its arts and culture. It is a relatively small city, however there are much to see and do.
+                        <span class="dots">...</span>
+                        <span class="more" style="display: none;">Situated on thermal springs, there are many naturally heated baths to relax in, the Széchenyi baths are the largest with 15 indoor baths and 3 outdoor. There are many spectacular viewpoints in Budapest, great for capturing the views of the city. From 360 panoramic views up at St Stephens Basilica to a wide view of the parliament and the River at Fisherman’s Bastion. Visit the Museum of Fine Arts and enjoy a day amongst famous European art. Classical music lovers will appreciate a performance at the Academy of Music.</span>
+                        <button onclick="readMore('3')" class="myBtn mt-3 px-5 py-2 bg-orange-500 text-white duration-300 hover:bg-orange-700 sm:flex flex-auto">
+                        Read more</button>
+                    </p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <div class="services" data-city="4">
+                    <img class="w-10" src="./img/icon.png" alt="" />
+                    <h1 class="font-medium text-lg dark:text-white">Javascript and libaries</h1>
+                    <p class="text-gray-400">
+                        Budapest is the capital city of Hungary. It is best known for its arts and culture. It is a relatively small city, however there are much to see and do.
+                        <span class="dots">...</span>
+                        <span class="more" style="display: none;">Situated on thermal springs, there are many naturally heated baths to relax in, the Széchenyi baths are the largest with 15 indoor baths and 3 outdoor. There are many spectacular viewpoints in Budapest, great for capturing the views of the city. From 360 panoramic views up at St Stephens Basilica to a wide view of the parliament and the River at Fisherman’s Bastion. Visit the Museum of Fine Arts and enjoy a day amongst famous European art. Classical music lovers will appreciate a performance at the Academy of Music.</span>
+                        <button onclick="readMore('4')" class="myBtn mt-3 px-5 py-2 bg-orange-500 text-white duration-300 hover:bg-orange-700 sm:flex flex-auto">
+                        Read more</button>
+                    </p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <div class="services" data-city="5">
+                    <img class="w-10" src="./img/icon.png" alt="" />
+                    <h1 class="font-medium text-lg dark:text-white">PHP</h1>
+                    <p class="text-gray-400">
+                        Budapest is the capital city of Hungary. It is best known for its arts and culture. It is a relatively small city, however there are much to see and do.
+                        <span class="dots">...</span>
+                        <span class="more" style="display: none;">Situated on thermal springs, there are many naturally heated baths to relax in, the Széchenyi baths are the largest with 15 indoor baths and 3 outdoor. There are many spectacular viewpoints in Budapest, great for capturing the views of the city. From 360 panoramic views up at St Stephens Basilica to a wide view of the parliament and the River at Fisherman’s Bastion. Visit the Museum of Fine Arts and enjoy a day amongst famous European art. Classical music lovers will appreciate a performance at the Academy of Music.</span>
+                        <button onclick="readMore('5')" class="myBtn mt-3 px-5 py-2 bg-orange-500 text-white duration-300 hover:bg-orange-700 sm:flex flex-auto">
+                        Read more</button>
+                    </p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <div class="services" data-city="6">
+                    <img class="w-10" src="./img/icon.png" alt="" />
+                    <h1 class="font-medium text-lg dark:text-white">CSS (frameworks) and UX</h1>
+                    <p class="text-gray-400">
+                        Budapest is the capital city of Hungary. It is best known for its arts and culture. It is a relatively small city, however there are much to see and do.
+                        <span class="dots">...</span>
+                        <span class="more" style="display: none;">Situated on thermal springs, there are many naturally heated baths to relax in, the Széchenyi baths are the largest with 15 indoor baths and 3 outdoor. There are many spectacular viewpoints in Budapest, great for capturing the views of the city. From 360 panoramic views up at St Stephens Basilica to a wide view of the parliament and the River at Fisherman’s Bastion. Visit the Museum of Fine Arts and enjoy a day amongst famous European art. Classical music lovers will appreciate a performance at the Academy of Music.</span>
+                        <button onclick="readMore('6')" class="myBtn mt-3 px-5 py-2 bg-orange-500 text-white duration-300 hover:bg-orange-700 sm:flex flex-auto ">
+                        Read more</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- works -->
+    <div id="works" class="py-20 dark:bg-slate-900">
+        <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+            <h1 class="text-indigo-600 font-bold">PORTFOLIOS</h1>
+            <h1 class="text-3xl dark:text-white">Student work, freelance and own projetcs</h1>
+            <p class="w-1/2 text-center text-gray-400">
+            My approach to website design is to create a website that
+            strengthens your company’s brand while ensuring ease of use and
+            simplicity for your audience.
+            </p>
+        </div>
+        <!-- bottom -->
+        <div class="mt-8 grid lg:grid-cols-4 gap-5">
+            <!-- cards go here -->
+            <div class="card"> 
+                <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div>
+                <img src="./img/CompleteJS_course.jpg" alt="stew" class="h-50 sm:h-70 w-full object-cover">
+                <div class="m-4">
+                    <span class="font-bold">5 Bean Chili Stew</span>
+                </div>
+                <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                <div class="flex items-center px-2">
+                    <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                    <div class="text-sm">
+                        <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                        <p class="text-gray-600">15 of October</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div> 
+                <img src="./img/NextJS_Apollo_MongoDB_graphQL.jpg" alt="stew" class="h-50 sm:h-70 w-full object-cover">
+                <div class="m-4">
+                    <span class="font-bold">5 Bean Chili Stew</span>
+                </div>
+                <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                <div class="flex items-center px-2">
+                    <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                    <div class="text-sm">
+                        <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                        <p class="text-gray-600">15 of October</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div> 
+                <img src="./img/ReactJS_Firebase.jpg" alt="noodles" class="h-50 sm:h-70 w-full object-cover">
+                <div class="m-4">
+                    <span class="font-bold">Veg Noodles</span>
+                </div>
+                <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                <div class="flex items-center px-2">
+                    <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                    <div class="text-sm">
+                        <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                        <p class="text-gray-600">15 of October</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div> 
+                <img src="./img/WP_Intermediate_Certificate.jpg" alt="curry" class="h-50 sm:h-70 w-full object-cover">
+                <div class="m-4">
+                    <span class="font-bold">Tofu Curry</span>
+                </div>
+                <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                <div class="flex items-center px-2">
+                    <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                    <div class="text-sm">
+                        <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                        <p class="text-gray-600">15 of October</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                </div>
+            </div>
+        </div>
+        <div class=" mt-6 flex justify-center">
+            <!---  <div class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Load more</div>
+            </div> -->
+           
+            <div class="services" data-city="7">
+                <p class="text-gray-400">
+                    <span class="dots"></span>
+                    <div class="more" style="display: none;"><div class="mt-8 grid lg:grid-cols-4 gap-5">
+                        <!-- cards go here -->
+                        <div class="card"> 
+                            <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div>
+                            <img src="./img/CompleteJS_course.jpg" alt="stew" class="h-50 sm:h-70 w-full object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">5 Bean Chili Stew</span>
+                            </div>
+                            <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                            <div class="flex items-center px-2">
+                                <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                                <div class="text-sm">
+                                    <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                                    <p class="text-gray-600">15 of October</p>
+                                </div>
+                            </div>
+                            <div class="badge">
+                                <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div> 
+                            <img src="./img/NextJS_Apollo_MongoDB_graphQL.jpg" alt="stew" class="h-50 sm:h-70 w-full object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">5 Bean Chili Stew</span>
+                            </div>
+                            <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                            <div class="flex items-center px-2">
+                                <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                                <div class="text-sm">
+                                    <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                                    <p class="text-gray-600">15 of October</p>
+                                </div>
+                            </div>
+                            <div class="badge">
+                                <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div> 
+                            <img src="./img/ReactJS_Firebase.jpg" alt="noodles" class="h-50 sm:h-70 w-full object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">Veg Noodles</span>
+                            </div>
+                            <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                            <div class="flex items-center px-2">
+                                <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                                <div class="text-sm">
+                                    <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                                    <p class="text-gray-600">15 of October</p>
+                                </div>
+                            </div>
+                            <div class="badge">
+                                <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="font-bold text-xl mb-2 text-center bg-gray-300 py-2 hover:bg-orange-500 hover:text-white">Udemy Javascript Course</div> 
+                            <img src="./img/WP_Intermediate_Certificate.jpg" alt="curry" class="h-50 sm:h-70 w-full object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">Tofu Curry</span>
+                            </div>
+                            <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                            <div class="flex items-center px-2">
+                                <img class="w-10 h-10 rounded-full mr-4" src="./img/icon.png" alt="Avatar of Jonathan Reinink">
+                                <div class="text-sm">
+                                    <p class="text-gray-900 leading-none">By: Jannick Pedersen</p>
+                                    <p class="text-gray-600">15 of October</p>
+                                </div>
+                            </div>
+                            <div class="badge">
+                                <svg class="inline-block w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M14.47 2.47a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06l4.72-4.72H9a5.25 5.25 0 100 10.5h3a.75.75 0 010 1.5H9a6.75 6.75 0 010-13.5h10.19l-4.72-4.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="mt-1 ml-1 px-2 py-2 hover:bg-orange-500 hover:text-white rounded-lg"><a href="https://www.udemy.com/">Udemy course - click me</a></span>
+                            </div>
+                        </div>
+                    </div></div>
+                    <button onclick="readMore('7')" class="myBtn rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
+                    Load more</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- TIMELINE -->
+    <div id="timeline" class="py-20 ">
+        <div class="container mx-auto">
+        <!-- top -->
+            <div class="flex flex-col items-center gap-3">
+                <h1 class="text-indigo-600 font-bold uppercase">Portfolio Timeline</h1>
+                <h1 class="text-3xl dark:text-white">Overview over latest</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                I help designers, small agencies and businesses bring their ideas to
+                life. Powered by Figma, VS Code and coffee, I turn your requirements
+                into a well-designed websites
+                </p>
+            </div>
+        <!-- bottom -->
+            <div class="flex justify-center">
+                <table class="border-collapse border border-slate-400 sm:h-70 w-auto mt-10">
+                    <thead>
+                        <tr>
+                            <th class="border bg-black text-white ">#</th>
+                            <th class="border bg-black text-white ">Year:</th>
+                            <th class="border bg-black text-white ">Project:</th>
+                            <th class="border bg-black text-white ">Live server:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-slate-300 ">1</td>
+                            <td class="border border-slate-300 ">2020</td>
+                            <td class="border border-slate-300 ">ReactJS with Google Firebase + Realtime database with login/register, auth + live chat
+                        </td>
+                        <td class="border border-slate-300 "></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 ">2</td>
+                            <td class="border border-slate-300 ">2020</td>
+                            <td class="border border-slate-300 ">NextJS with MongoDb and GraphQL, with Nested live update comment thread</td>
+                            <td class="border border-slate-300 "></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 ">3</td>
+                            <td class="border border-slate-300 ">2020</td>
+                            <td class="border border-slate-300 ">ReactJS with Google Firebase</td>
+                            <td class="border border-slate-300 "></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 ">4</td>
+                            <td class="border border-slate-300 ">2020</td>
+                            <td class="border border-slate-300 ">ReactJS with Google Firebase</td>
+                            <td class="border border-slate-300 "></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 ">5</td>
+                            <td class="border border-slate-300 ">2020</td>
+                            <td class="border border-slate-300 ">ReactJS with Google Firebase</td>
+                            <td class="border border-slate-300 "></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- contact -->
+    <div id="contact" class="py-20 dark:bg-slate-900">
+        <div class="container mx-auto">
+        <!-- top -->
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-indigo-600 font-bold">CONTACT</h1>
+                <h1 class="text-3xl dark:text-white">Have a Question?</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                Do you have an idea? Let's discuss it and see what we can do
+                together.
+                </p>
+            </div>
+        <!-- bottom -->
+            <div class="relative flex flex-col justify-center mt-10 overflow-hidden">
+                <div class="w-full p-6 m-auto bg-white rounded shadow-lg ring-3 lg:max-w-md">
+                    <h1 class="text-3xl font-semibold text-center text-gray-500"><img class="w-15 inline-block px-2" src="./img/logo.png" alt="logo" />Jannick Pedersen</h1>
+                    <form action="">
+                        <!-- Name -->
+                        <div class="flex flex-col">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required class="peer w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40">
+                
+                            <p class="invisible peer-invalid:visible text-red-700 font-light">
+                                Please enter your name
+                            </p>
+                        </div>
+                        <!-- Email -->
+                        <div class="flex flex-col">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required class="peer block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40">
+                            <p class="invisible peer-invalid:visible text-red-700 font-light">
+                                Please enter a valid email address
+                            </p>
+                        </div>
+                        <!-- Message -->
+                        <div class="flex flex-col">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="3" required
+                                class="peer block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40"></textarea>
+                            <p class="invisible peer-invalid:visible text-red-700 font-light">
+                                This field cannot be empty
+                            </p>
+                        </div>
+                        <button class="text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer hover:shadow-inner w-full mt-2">Send</button>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="p-10 bg-gray-800 text-gray-200">
+            <div class="max-w-7xl mx auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 lg:grind-cols-4">
+                    <div class="mb-5">
+                        <h4 class="text-2xl pb-4">Jannick Pedersen</h4>
+                        <p class="text-gray-500">
+                            Copenhagen, Taastrup<br>
+                            Gadehavegaard 2630 Øksen<br>
+                            <br>
+                            <strong>Phone:</strong>+45 43546677<br>
+                            <strong>Email:</strong>jannick@pepe.com<br>
+                        </p>
+                    </div>
+                    <div class="mb-5">
+                        <h4 class="pb-2">Useful Links</h4>
+                        <ul class="text-gray-500">
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#home" class="hover:text-orange-500"> Home</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#about" class="hover:text-orange-500"> About</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#services" class="hover:text-orange-500"> Services</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#works" class="hover:text-orange-500"> Works</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#timeline" class="hover:text-orange-500"> Timeline</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#contact" class="hover:text-orange-500"> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-5">
+                        <h4 class="pb-2">Our Services</h4>
+                        <ul class="text-gray-500">
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#" class="hover:text-orange-500"> Frontend/Backend</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#" class="hover:text-orange-500"> Dev Env</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#" class="hover:text-orange-500"> Javascript</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#" class="hover:text-orange-500"> PHP</a></li>
+                            <li class="pb-2"><li class="fa fa-chevron-right text-orange-500"></li><a href="#" class="hover:text-orange-500"> UX</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="pb-2">Contact me only for:</h4>
+                        <p class="text-gray-500 pb-2">Internship January 2023 and fulltime work</p>
+                        <form class="flex flex-row flex-wrap">
+                            <input type="text" class="text-gray-500 w-2/3 p-2 focus:border-orange-500" placeholder="email@example.com">
+                            <button class="p-2 w-1/3 bg-orange-500 text-white hover:bg-orange-600">Send</button>
+                        </form>
+                        <div class="max-w-7xl flex flex-col sm:flow-row py-4 mx-auto justify-between items-center">
+                            <div class="text-center text-xl text-white">
+                                <a href="#" class="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 mx-1 inline-block pt-1">
+                                    <li class="fa fa-twitter"></li>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 mx-1 inline-block pt-1">
+                                    <li class="fa fa-facebook"></li>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 mx-1 inline-block pt-1">
+                                    <li class="fa fa-youtube"></li>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 mx-1 inline-block pt-1">
+                                    <li class="fa fa-instagram"></li>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 mx-1 inline-block pt-1">
+                                    <li class="fa fa-linkedin"></li>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-gray-900 text-gray-500 px-10">
+            <div class="max-w-7xl flex flex-col sm:flow-row py-4 mx-auto justify-between items-center">
+                <div class="text-center">
+                    copyright @<strong><span>Jannick Pedersen</span></strong>. All rights reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Implement the Back Top Top Button -->
+     <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+     class="hidden fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
+
+
+    <script src="./app.js"></script>
+    <script src="./autotyping.js"></script>
+
+</body>
+</html>
