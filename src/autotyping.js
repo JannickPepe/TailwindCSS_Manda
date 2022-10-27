@@ -129,7 +129,7 @@ var AutoTyping = (function (e) {
   exampleTyping.start()
 
 
-  const exampleText2 = ['Looking for Internship', 'January 2023', 'Thank you!'];
+  const exampleText2 = ['Looking for Internship!', 'January 2023'];
   const exampleTyping2 = new AutoTyping('#text2', exampleText2, {
       typeSpeed: 100,
       deleteSpeed: 100,

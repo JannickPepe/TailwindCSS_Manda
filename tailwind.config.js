@@ -13,8 +13,14 @@ module.exports = {
       },
       spacing:{
         "big":"48rem"
-      }
-    },
+      },
+      animation: {
+        // Bounces 5 times 1s equals 5 seconds
+        'bounce-short': 'bounce 1s ease-in-out 6',
+        'ping-slow': 'ping 2s ease-in-out 3'
+      },
+      
+    }, 
     screens:{
       sm:"480px",
       md:"768px",
