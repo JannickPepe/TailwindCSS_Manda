@@ -17,7 +17,7 @@ module.exports = {
       animation: {
         // Bounces 5 times 1s equals 5 seconds
         'bounce-short': 'bounce 1s ease-in-out 6',
-        'ping-slow': 'ping 2s ease-in-out 3'
+        'ping-slow': 'ping 2s ease-in-out 2',
       },
       
     }, 
